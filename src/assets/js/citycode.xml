@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<China>
+  <province id="01" name="北京">
+    <city id="0101" name="北京">
+      <county id="010101" name="北京" weatherCode="101010100"/>
+      <county id="010102" name="海淀" weatherCode="101010200"/>
+      <county id="010103" name="朝阳" weatherCode="101010300"/>
+      <county id="010104" name="顺义" weatherCode="101010400"/>
+      <county id="010105" name="怀柔" weatherCode="101010500"/>
+      <county id="010106" name="通州" weatherCode="101010600"/>
+      <county id="010107" name="昌平" weatherCode="101010700"/>
+      <county id="010108" name="延庆" weatherCode="101010800"/>
+      <county id="010109" name="丰台" weatherCode="101010900"/>
+      <county id="010110" name="石景山" weatherCode="101011000"/>
+      <county id="010111" name="大兴" weatherCode="101011100"/>
+      <county id="010112" name="房山" weatherCode="101011200"/>
+    </city>
+  </province>
+</China>

@@ -135,16 +135,7 @@
 		mounted(){
 			// this.scrolltopH()
 			window.addEventListener('scroll',this.initHeight);
-			if(this.$route.query.searchcity==""||this.$route.query.searchcity==undefined){
-				if(sessionStorage.getItem('cityname')==""||sessionStorage.getItem('cityname')==undefined){
-					this.currentadress = this.currentadress
-				}else{
-					this.currentadress = sessionStorage.getItem('cityname')
-				}
-			}else{
-				this.currentadress = this.$route.query.searchcity
-			}
-			this.currentcity(this.currentadress);
+			this.judgecitycode();
 			console.log(this.$route.query.searchcity)
 		},
 		methods:{
@@ -185,14 +176,38 @@
 		        let scrollTop_h = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
 		        this.scrolltopheight = scrollTop_h > 100 ? true : false;
 		    },
+		    judgecitycode(){
+		    	if(this.$route.query.searchcity==""||this.$route.query.searchcity==undefined){
+					if(sessionStorage.getItem('cityname')==""||sessionStorage.getItem('cityname')==undefined){
+						this.currentadress = this.currentadress
+					}else{
+						this.currentadress = sessionStorage.getItem('cityname')
+					}
+				}else{
+					this.currentadress = this.$route.query.searchcity
+				}
+				this.currentcity(this.currentadress);
+		    },
 		    currentcity(cityname){
 		    	this.citylist.filter((item,index,array)=>{
 		    		console.log(item.city_name.indexOf(cityname)>-1)
 		    		if(item.city_name.indexOf(cityname)>-1){
 		    			sessionStorage.setItem('cityname',cityname);
+		    			this.currentadress = sessionStorage.getItem('cityname')
     					this.currentcitydata(item.city_code);
     					this.RTW(item.city_code);
     					console.log(item.city_code)
+		    		}else{
+		    			if(item.city_name.indexOf(sessionStorage.getItem('cityname'))>-1){
+		    				this.currentadress = sessionStorage.getItem('cityname')
+		    				this.$message({
+					          	message: '定位失败，默认上一个城市',
+					          	type: 'info'
+					    	})
+		    				this.currentcitydata(item.city_code);
+    						this.RTW(item.city_code);
+    						console.log(item.city_code)
+		    			}
 		    		}
 		    	});
 		    },
@@ -286,11 +301,11 @@
 			    		});
 			    		this.$refs.shortermref.addtemps(rtwarray);
 			    	})
-			        console.log(rsp)
+			        // console.log(rsp)
 			    })
 			    .catch(error=>{
 			     	//在不清楚error的返回数据结构时，可以返回error,然后打断点，查看error返回结构
-			        console.log(error)
+			        // console.log(error)
 			    })
 			},
 			bjpictur(n){
