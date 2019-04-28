@@ -1,0 +1,37 @@
+*{ margin:0px; padding:0px;}
+html{-webkit-text-size-adjust: none;/*禁止页面文字自动调整大小*/}
+body{color:#000; font-family:'PingFangSC-Regular',"Lantinghei SC","Microsoft Yahei","Helvetica Neue","STHeiTi","sans-serif";min-width:320px;font-size:14px;background:#f3f3f3;line-height:1;}
+ul,li{ list-style:none;}
+.clearfix:after{clear:both;content:'';display:block;font-size:0;line-height:0;height:0;visibility:hidden;}
+.fl{float:left;}
+.fr{float:right;}
+.clear{ clear:both;}
+a{text-decoration:none;}
+a,button,input,select{-webkit-tap-highlight-color:rgba(0,0,0,0);outline:0;}
+input,textarea,select{border:0px;border-radius:0px;-webkit-border-radius:0;outline:none;vertical-align:middle;font-family:"微软雅黑"; }
+input,textarea,select{-webkit-appearance:none; -moz-appearance:none;outline:0;}
+input.default[type=number]::-webkit-inner-spin-button,  
+input.default[type=number]::-webkit-outer-spin-button,
+input.default[type=number] {-webkit-appearance: none;-moz-appearance:textfield;/*去除数字输入框右边上下箭头*/}  
+textarea{ resize:none;}
+img{ border:0px; vertical-align:middle}
+.middle{vertical-align:middle}
+i,em{font-style:normal;}
+a{ cursor:pointer;}
+.blod{ font-weight:bold;}
+input:focus,textarea:focus{color:#454545;}
+button:focus{outline: 0;}
+.btn:focus,.btn:active:focus,.btn.active:focus,.btn.focus,.btn:active.focus,
+.btn.active.focus{outline: none;border-color: transparent;box-shadow:none;}
+select::-ms-expand { display: none;}
+
+.page{text-align: right;height: 30px;line-height: 30px;padding:0 10px 30px 10px;}
+.page span{display: inline-block;text-decoration: none;width: 50px;height: 30px;line-height: 30px;text-align: center;border:1px solid #000;margin: 0 5px;color: #000;cursor: pointer;}
+.page span.current{background: #eee;border:1px solid #4b98cb;color: #4b98cb;}
+.page span.go{border:0;font-weight: bold;width: auto;}
+.page span.spanFirst,.page span.spanLast,.page em.spanTotalPage,.page em.spanTotalNum{border: 0;width: auto;}
+.page span.spanPre{border: 0;width: auto;margin-right: 10px;}
+.page span.spanNext{border: 0;width: auto;margin-left: 10px;}
+.page em{display: inline-block;vertical-align: top;width: 50px;height: 30px;line-height: 30px;text-align: center;border:1px solid #000;margin: 0 5px;color: #000;}
+.page .input_val{display: inline-block;vertical-align: top;width: 100%;height: 100%;line-height: 20px;text-align: center;border:0;margin: 0 5px;color: #000;background: none;position: absolute;left: -5px;top: 0;}
+.page .hide_val{display: inline-block;vertical-align: text-bottom;width: 40px;height: 20px;line-height: 20px;text-align: center;border:1px solid #000;margin: 0 5px;color: #000;position: relative;}
