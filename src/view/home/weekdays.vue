@@ -55,7 +55,7 @@
 							this.$set(_this.weekdays[index],'weekday',itemweek);
 						}
 						let itemday = item.ymd.slice(5,7)+'/'+item.ymd.slice(8,10);
-						let itemtemp = item.low.slice(3,7)+'°~'+item.high.slice(3,7)+'°';
+						let itemtemp = item.low.replace('低温 ','').replace('℃','')+'°~'+item.high.replace('高温 ','').replace('℃','')+'°';
 						this.$set(_this.weekdays[index],'day',itemday);
 						this.$set(_this.weekdays[index],'temperature',itemtemp);
 						this.$set(_this.weekdays[index],'weather',item.type);

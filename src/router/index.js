@@ -13,7 +13,7 @@ export default new Router({
 		{
 			path:'/',
 			redirect:{
-				name:'home'
+				name:'home' // 重定向到主页
 			}
 		},
 		{
@@ -51,6 +51,10 @@ export default new Router({
 				keepAlive: false
 			},
 			component: serchcity
+		},
+		{
+			path: '*',
+			redirect:'/' //路由按顺序从上到下，依次匹配。最后一个*能匹配全部，然后重定向到主页面
 		},
 	]
 })

@@ -102,8 +102,8 @@
 						}
 						futurjson.fl = item.fl;
 						futurjson.fx = item.fx;
-						futurjson.high = item.high.slice(3,7);
-						futurjson.low = item.low.slice(3,7);
+						futurjson.high = item.high.replace('高温 ','').replace('℃','');
+						futurjson.low = item.low.replace('低温 ','').replace('℃','');
 						futurjson.type = item.type
 						futurjson.ymd = item.ymd.slice(5,7)+'/'+item.ymd.slice(8,10);
 						futurjsonarray.push(futurjson);

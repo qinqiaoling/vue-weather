@@ -89,7 +89,7 @@
 	import infonav from './infonav'
 	import cityjson from '@/assets/js/_city.json'
 	export default {
-		name: '',
+		name: 'home',
 		data () {
 			return {
 				scrolltopheight:false,
@@ -220,8 +220,8 @@
 	                    	let dataobj = res.data;
 	                    	sessionStorage.setItem('citycode',citycode);
 	                    	sessionStorage.setItem('dataobj',JSON.stringify(dataobj));
-	                		let yesterdaylow = Number(dataobj.yesterday.low.slice(3,7)).toFixed(1);//昨天最低气温
-			    			let yesterdayhigh = Number(dataobj.yesterday.high.slice(3,7)).toFixed(1);//昨天最高气温
+	                		let yesterdaylow = Number(dataobj.yesterday.low.replace('低温 ','').replace('℃','')).toFixed(1);//昨天最低气温
+			    			let yesterdayhigh = Number(dataobj.yesterday.high.replace('高温 ','').replace('℃','')).toFixed(1);//昨天最高气温
 			    			_this.currentemperature = dataobj.wendu;//当天体温
 			    			_this.currentweather = dataobj.forecast[0].type;//当天天气
 			    			_this.currentairqualityindex = Number(dataobj.forecast[0].aqi).toFixed(0);//当天空气质量指数

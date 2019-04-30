@@ -49,8 +49,8 @@
 						m=parseInt(index)+1;
 						this.$set(_this.infonav[index],'iurl','/home');
 						this.$set(_this.infonav[index],'ipic','/static/images/'+m+'.png');
-						tgtemhigh = Number(item.high.slice(3,7)).toFixed(1);
-						tgtemlow = Number(item.low.slice(3,7)).toFixed(1);
+						tgtemhigh = Number(item.high.replace('高温 ','').replace('℃','')).toFixed(1);
+						tgtemlow = Number(item.low.replace('低温 ','').replace('℃','')).toFixed(1);
 						this.$set(_this.infonav[index],'cweekday',now.getDate())
 						if(index==0){
 							this.$set(_this.infonav[index],'ititie',now.getMonth()+1+'月'+now.getDate()+'日');
