@@ -172,9 +172,6 @@
 				line-height: 0.8rem;
 				padding: 0 0.2rem;
 				flex: 1;
-				// position:fixed;
-				// left: 0;
-				// top: 0;
 				i{
 					padding-right:0.2rem;
 				}
@@ -193,7 +190,8 @@
 				display: flex;
 				z-index: 0;
 				li{
-					flex: 0 0 1rem;
+					flex: 1;
+					min-width: 1rem;
 					&:nth-child(2n){
 						background-image:linear-gradient(180deg, #f0f7fd 20%,#fcfefd 80%);
 					}
@@ -204,9 +202,10 @@
 				z-index: 1;
 				ul{
 					display: flex;
-					width: 15rem;
+					min-width: 15rem;
 					li{
-						flex: 0 0 1rem;
+						flex: 1;
+						min-width: 1rem;
 						color: #888;
 						font-size: 0.2rem;
 						p{
