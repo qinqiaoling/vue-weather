@@ -229,9 +229,10 @@
 		margin: 0.2rem 0;
 		padding: 0 0.2rem;
 		position: relative;
+		overflow: hidden;
 		.myChart{
 			height: 5rem;
-			width: calc(100vw-0.4rem);
+			width: calc(98vw - 0.4rem);
 			margin: 0 auto;
 		}
 	}

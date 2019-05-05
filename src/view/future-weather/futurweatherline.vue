@@ -156,7 +156,7 @@
 <style type="text/css" lang="scss" scoped="scoped">
 	/deep/.futurtemp_center{
 		min-width: 15rem;
-		width: 100vw;
+		width: 98vw;
 		height: 4rem;
 	}
 </style>
