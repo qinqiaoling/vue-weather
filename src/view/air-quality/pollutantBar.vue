@@ -1,5 +1,7 @@
 <template>
-	<div class="pollutant-bar" id="myChart"></div>
+	<div class="pollutant-bar">
+		<div class="myChart" id="myChart"></div>
+	</div>
 </template>
 <script type="text/javascript">
 	export default {
@@ -29,7 +31,7 @@
 		    	myChart.setOption({
 					title: { 
 						text: '未来多天',
-			            x:'5%',
+			            x:'0%',
 			            top:fontSize/5,
 			            textStyle:{
 			                color:'#000',
@@ -109,8 +111,8 @@
 				        }
 					},
 					grid: {
-				        left: '5%',
-				        right: '5%',
+				        left: '0%',
+				        right: '0%',
 				        bottom: '5%',
 				        top: '32%',
 				        containLabel: true
@@ -223,9 +225,14 @@
 </script>
 <style type="text/css" lang="scss" scoped="scoped">
 	/deep/.pollutant-bar{
-		height: 5rem;
 		background: #fff;
 		margin: 0.2rem 0;
-		width: 100vw;
+		padding: 0 0.2rem;
+		position: relative;
+		.myChart{
+			height: 5rem;
+			width: calc(100vw-0.4rem);
+			margin: 0 auto;
+		}
 	}
 </style>
