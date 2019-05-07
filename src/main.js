@@ -8,7 +8,7 @@ import axios from 'axios'/*引入资源请求插件*/
 
 import ElementUI from 'element-ui'
 // import ElementUI from '@/assets/js/element.js'//引用element.js
-import '../node_modules/element-ui/lib/theme-chalk/index.css'
+import 'element-ui/lib/theme-chalk/index.css'
 
 //导出excel插件
 // import FileSaver from 'file-saver'
@@ -34,7 +34,7 @@ import VueI18n from 'vue-i18n'
 import LangEn from '../static/lang/en'
 import LangZh from '../static/lang/zh'
 
-Vue.use(VueI18n)
+// Vue.use(VueI18n)
 
 Vue.use(ElementUI);//调用element组件
 
@@ -54,16 +54,16 @@ Vue.prototype.GLOBAL=goble_;//定义全局变量
 
 Vue.prototype.$echarts = echarts //引入echarts组件
 
-const  i18n = new VueI18n({
-   	locale: localStorage.getItem('locale') || 'zh',
-	//解决页面刷新后，通过按钮切换的语言还原成了最初的语言，无法保存
-	messages: {
-	    'en': LangEn,
-	    'zh': LangZh
-	}
-})
+// const i18n = new VueI18n({
+//    	locale: localStorage.getItem('locale') || 'zh',
+// 	//解决页面刷新后，通过按钮切换的语言还原成了最初的语言，无法保存
+// 	messages: {
+// 	    'en': LangEn,
+// 	    'zh': LangZh
+// 	}
+// })
 /* 为了实现element插件的多语言切换 */
-locale.i18n((key, value) => i18n.t(key, value))
+// locale.i18n((key, value) => i18n.t(key, value))
 
 // let loadingInstance_a //定义loading定时器
 // router.beforeEach(function (to, from, next) {
@@ -108,7 +108,7 @@ locale.i18n((key, value) => i18n.t(key, value))
 new Vue({
   el: '#app',
   router,
-  i18n,
+  // i18n,
   axios,
   store,
   components: { App },

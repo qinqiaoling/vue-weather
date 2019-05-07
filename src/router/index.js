@@ -4,7 +4,11 @@ import Router from 'vue-router'
 import home from '@/view/home/homepage'//首页
 import airQuality from '@/view/air-quality/airQuality' //空气质量页面
 import futureWeather from '@/view/future-weather/futureWeather' //未来15天天气页面
-import serchcity from '@/view/home/serchcity' //未来15天天气页面
+import serchcity from '@/view/home/serchcity' //城市搜索
+
+import navdetails from '@/view/home/navdetails' //指数详情
+import calendar from '@/view/home/calendar' //日历
+import recommend from '@/view/home/recommend' //每日推荐
 Vue.use(Router)
 
 export default new Router({
@@ -51,6 +55,33 @@ export default new Router({
 				keepAlive: false
 			},
 			component: serchcity
+		},
+		{
+			path: '/navdetails',
+			name: 'navdetails',
+			meta:{
+				auth:false,
+				keepAlive: false
+			},
+			component: navdetails
+		},
+		{
+			path: '/calendar',
+			name: 'calendar',
+			meta:{
+				auth:false,
+				keepAlive: false
+			},
+			component: calendar
+		},
+		{
+			path: '/recommend',
+			name: 'recommend',
+			meta:{
+				auth:false,
+				keepAlive: false
+			},
+			component: recommend
 		},
 		{
 			path: '*',
